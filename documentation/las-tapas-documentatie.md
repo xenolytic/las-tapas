@@ -171,8 +171,8 @@
 - Gebruik PHPDoc-stijl comments voor documentatie van klassen en methoden.
 
 Voorbeeld:
-
-`/**
+```
+/**
  * Class for handling reservations.
  */
 class Reservation {
@@ -186,7 +186,7 @@ class Reservation {
     public function createReservation($customerId, $tableNumber) {
         // Implementatie hier...
     }
-}`
+}
 
 ## Error Handling
 
