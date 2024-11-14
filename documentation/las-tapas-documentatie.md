@@ -187,6 +187,7 @@ class Reservation {
         // Implementatie hier...
     }
 }
+```
 
 ## Error Handling
 
