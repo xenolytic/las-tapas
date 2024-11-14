@@ -1,0 +1,63 @@
+Stap 1: Klant komt aan in het restaurant
+Beslissing: Heeft de klant gereserveerd?
+Ja: Ga naar Stap 2 (Reservering ophalen)
+Nee: Ga naar Stap 3 (Vrije tafel zoeken)
+
+Stap 2: Reservering ophalen
+Actie: Systeem opent klantprofiel op basis van reservering
+Gegevens ophalen: Klantinformatie, reserveringsdetails, tafelnummer
+Notificatie: Systeem informeert personeel dat de klant gearriveerd is
+Uitkomst: Personeel begeleidt de klant naar de tafel
+
+Stap 3: Vrije tafel zoeken
+Actie: Systeem zoekt automatisch beschikbare tafels
+Beslissing: Is er een tafel vrij?
+Ja: Begeleidt klant naar tafel; ga verder met Stap 4 (Bestelling opnemen)
+Nee: Bied een wachttijd aan de klant en sla naam op in een wachtrij met tijd en contactinformatie (voor eventuele updates)
+
+Stap 4: Bestelling opnemen via QR-systeem
+Actie: Klant scant QR-code en opent digitaal menu (direct gekoppeld aan keuken)
+Interface: Menu toont direct allergeneninformatie en speciale aanbiedingen
+Bestelproces: Klant kiest gerechten en drukt op 'Bestellen'
+Beslissing: Zijn er speciale verzoeken?
+Ja: Klant vult verzoek in; extra informatie wordt aan bestelling toegevoegd
+Nee: Bestelling wordt standaard verwerkt; ga naar Stap 5
+
+Stap 5: Bestelling verwerken
+Actie: Bestelling wordt naar de keuken verzonden en de klant ontvangt een bevestiging
+Voorraadcheck: Systeem trekt ingrediënten direct af van de voorraad op basis van bestelde items
+Melding bij lage voorraad: Als voorraad < minimum, krijgt de manager automatisch een melding voor bestelling (volgende stap)
+Statusupdate: Bestelling krijgt een status in het systeem (bijv. ‘In Bereiding’)
+
+Stap 6: Voorraadniveau controleren en aanvullen
+Beslissing: Zijn de voorraadniveaus toereikend?
+Ja: Ga door naar Stap 7 (Klant serveren)
+Nee: Manager ontvangt melding ‘Voorraad Bijvullen’
+Actie: Manager controleert melding en plaatst handmatig een bestelling in het systeem of schakelt inkoop in
+Automatisering: Voorraadniveau wordt bijgewerkt zodra nieuwe voorraad binnenkomt
+
+Stap 7: Klant serveren
+Actie: Systeem meldt dat de bestelling klaar is; bediening ontvangt een melding
+Bestelling: Bestelling wordt aan tafel geserveerd
+Beslissing: Wil de klant nog iets bijbestellen?
+Ja: Terug naar Stap 4 (Bestelling opnemen via QR-systeem)
+Nee: Ga naar Stap 8 (Rekening aanmaken)
+
+Stap 8: Rekening aanmaken
+Actie: Systeem berekent het totaal op basis van alle bestelde items, inclusief eventuele kortingen of servicekosten
+Betaaloptie via QR-code: Klant scant QR-code en betaalt direct met hun telefoon
+Andere opties: Contant of met kaart bij bediening betalen; systeem houdt betalingsmethode bij
+Melding: Personeel wordt geïnformeerd zodra betaling is afgerond
+
+Stap 9: Afronden klantverblijf
+Actie: Systeem markeert tafel als ‘Beschikbaar’
+Update reserveringssysteem: Systeem informeert personeel over tafelstatus, klaar voor volgende gasten
+Beoordeling: Optioneel ontvangt de klant een feedbackformulier via SMS of e-mail voor kwaliteitsmonitoring
+
+
+Systeemcomponenten die de flow ondersteunen
+Reserveringsbeheer: Beheert alle aankomende reserveringen en bijbehorende tafelindeling.
+QR-Menu & Bestelinterface: Helpt klanten zelfstandig te bestellen zonder tussenkomst van personeel.
+Voorraadbeheer: Volgt voorraadniveaus en geeft meldingen voor lage voorraadniveaus.
+Betalingsverwerking: Biedt klanten meerdere opties (QR-code, contant, kaart) en verwerkt betalingen automatisch.
+Tafelstatus-update: Houdt het personeel geïnformeerd over beschikbare tafels en tafelstatussen.

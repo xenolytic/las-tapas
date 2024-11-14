@@ -1,0 +1,94 @@
+1. PHP Coding Conventions
+Bestandsindeling en Structuur:
+Elke klasse in een apart bestand, genoemd naar de klasse (bijv. Reservation.php).
+Geef bestanden namen die het doel beschrijven, bijvoorbeeld ReservationController.php voor de controller en ReservationModel.php voor het model.
+Gebruik een config.php bestand voor configuratie-instellingen (bijv. databasegegevens).
+
+Class Naming:
+Gebruik PascalCase voor klassen (bijv. Customer, ReservationModel).
+Controllers eindigen op Controller (bijv. ReservationController).
+Models eindigen op Model (bijv. ReservationModel).
+
+Method Naming:
+Gebruik camelCase voor methoden (bijv. createReservation, updateInventory).
+Methode namen moeten duidelijk het doel beschrijven, bijvoorbeeld getCustomerById in plaats van getCustomer.
+
+Variables:
+Gebruik camelCase voor variabelen (bijv. $totalPrice, $reservationList).
+Vermijd afkortingen tenzij algemeen bekend (bijv. $db voor database).
+
+Commentaar en Documentatie:
+Documenteer elke klasse en methode met PHPDoc-stijl comments:
+php
+/**
+ * Class for handling reservations.
+ */
+class Reservation {
+    /**
+     * Creates a new reservation.
+     *
+     * @param int $customerId
+     * @param int $tableNumber
+     * @return bool
+     */
+    public function createReservation($customerId, $tableNumber) {
+        // Implementatie hier...
+    }
+}
+
+Error Handling:
+Gebruik try-catch voor database interacties om fouten netjes af te handelen.
+Log fouten naar een error_log bestand om de productie-omgeving veilig te houden.
+
+2. SQL Conventions
+SQL Conventions (met camelCase)
+Naming:
+Gebruik camelCase voor tabel- en kolomnamen (bijv. customerId, reservationDate).
+Kies duidelijke tabelnamen die entiteiten beschrijven, zoals customers, reservations, orders, menuItems.
+
+Primary en Foreign Keys:
+Primary Keys: Gebruik id of een unieke naam (bijv. customerId) als primaire sleutel.
+Foreign Keys: Gebruik de naam van de entiteit, gevolgd door Id (bijv. customerId in reservations).
+
+3. HTML Conventions
+Structuur en Indentatie:
+Indenteer consistent met 2 of 4 spaties per niveau.
+Sluit altijd tags correct af en zorg voor nette nesting.
+
+Class Naming:
+Gebruik kebab-case voor HTML-classes (bijv. menu-item, reservation-form).
+Geef betekenisvolle namen aan classes om duidelijk te maken waar ze voor dienen.
+
+Attributes:
+Gebruik alt attributen op alle afbeeldingen.
+Gebruik aria-* attributen waar nodig voor toegankelijkheid.
+
+4. CSS Conventions
+Naming en Structuur:
+Gebruik kebab-case voor CSS-klassenamen, bijvoorbeeld .header-menu, .order-summary.
+Gebruik BEM (Block Element Modifier) structuur voor complexere UI-componenten (bijv. .menu__item--active).
+
+Commentaar en Organisatie:
+Voeg secties toe met comments voor verschillende componenten (bijv. /* Header Styling */).
+Houd styling voor de layout (bijv. flexbox) gescheiden van styling voor kleuren en fonts.
+
+Bestand Structuur:
+Maak indien nodig aparte CSS-bestanden voor algemene stijlen (global.css) en specifieke componenten (reservation.css).
+
+5. JavaScript Conventions
+Variables:
+Gebruik camelCase voor variabelen en functies, bijvoorbeeld fetchReservations, orderTotal.
+Gebruik const of let in plaats van var.
+
+Function Naming:
+Functies moeten werkwoorden bevatten om hun doel duidelijk te maken, bijvoorbeeld loadData, updateInventory.
+
+Event Handlers:
+Geef event handler-functies duidelijke namen, zoals handleSubmitOrder.
+
+Modulariteit:
+Houd functies klein en richt ze op één taak. Maak indien nodig modules voor specifieke functionaliteiten.
+
+Commentaar:
+Voeg korte comments toe om complexe logica uit te leggen.
+Documenteer elke functie met beschrijvende comments.

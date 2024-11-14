@@ -1,0 +1,61 @@
+1. Structuur en Bestandsindeling
+Model-View-Controller (MVC) Structuur:
+Controllers: Voor verwerking van inkomende verzoeken (bijv. ReservationController, OrderController).
+Models: Voor database-interactie en het ophalen van gegevens (bijv. UserModel, MenuModel).
+Views: HTML-pagina's met gescheiden CSS en dynamische content in PHP. Maak voor elke belangrijke functionaliteit een aparte view (bijv. reservation.php, order.php).
+Core:
+Database: Maak een singleton-klasse voor de MySQLi-verbinding.
+Router: Voor het toewijzen van routes aan controllers.
+Session Handling: Voeg sessiebeheer toe om gebruikerssessies veilig te beheren.
+
+
+2. Database (MySQLi)
+Entiteiten en Relaties:
+Klanten (Customers): customer_id (PK), naam, email, telefoonnummer, registratiedatum.
+Reserveringen (Reservations): reservation_id (PK), customer_id (FK), tafelnummer, datum, tijd, opmerkingen.
+Bestellingen (Orders): order_id (PK), reservation_id (FK), totaalprijs, status, tijd.
+Menu Items: menu_id (PK), naam, prijs, beschrijving, categorie.
+Voorraad (Inventory): inventory_id (PK), item, aantal, minimum_niveau.
+FK-Relaties:
+
+Zorg dat de reservering en bestelling gelinkt zijn aan klanten en dat er FK-verwijzingen zijn naar tafels en voorraaditems.
+Database Klasse:
+
+Maak een database-klasse die de MySQLi-verbinding beheert en methoden aanbiedt voor veelvoorkomende bewerkingen zoals query, fetch, en prepare.
+
+3. Functionaliteit per Oplossing
+Reserveringssysteem:
+Classes: Reservation, ReservationController, ReservationModel.
+Functionaliteit: createReservation, viewReservation, cancelReservation.
+
+Voorraadbeheer:
+Classes: Inventory, InventoryController, InventoryModel.
+Functionaliteit: viewInventory, updateStock, orderNewStock.
+Voeg methodes toe om voorraad op basis van verkochte items automatisch bij te werken.
+Bestelsysteem met QR-code:
+
+Classes: Order, OrderController, OrderModel.
+Functionaliteit: placeOrder, viewOrder, updateOrderStatus.
+QR-code: Een JavaScript-bibliotheek kan QR-codes genereren voor elke tafel.
+Digitale Communicatie voor Personeel:
+
+Class: Message, MessageController.
+Functionaliteit: sendMessage, receiveMessage met basis-JavaScript voor real-time berichten.
+Betalingsverwerking:
+
+Classes: Payment, PaymentController.
+Functionaliteit: Integratie van betaalmethodes, bijv. processPayment, viewTransaction.
+
+4. Frontend met HTML, CSS en JavaScript
+CSS voor Styling:
+
+Gebruik gescheiden CSS-bestanden voor styling. Overweeg een utility-klasse structuur voor herbruikbare componenten.
+JavaScript voor Interacties:
+
+Voor dynamische onderdelen zoals de bestelinterface, statusupdates, en voorraadmeldingen.
+
+5. Projectbeheer en Testing
+Projectbeheer: Gebruik Trello of een vergelijkbaar tool om taken en functionaliteiten op te splitsen.
+Testing:
+PHP Unit Testing: Voor belangrijke classes zoals Reservation, Order.
+Manual Testing: Test user flows, zoals het plaatsen van bestellingen en reserveringen, en zorg dat gegevens in de database correct worden bijgewerkt.
