@@ -60,10 +60,6 @@ Dit project wordt gehost op een webserver en vereist geen installatie door eindg
 3. **Back-ups**:  
    - Regelmatige databaseback-ups zijn aanbevolen om gegevensverlies te voorkomen.
 
-## Licentie
-
-Dit project is eigendom van [Naam Bedrijf]. Contacteer ons voor licentie-informatie of commerciële samenwerking.
-
 ---
 
-**Gebouwd met zorg om restaurants soepel te laten draaien!**
+**Gebouwd met ❤️ om Las Tapas te innoveren!**
