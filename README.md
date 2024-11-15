@@ -1,74 +1,69 @@
-# Restaurant Management System
+# Restaurant Management Systeem
 
-**A streamlined system to manage reservations, orders, inventory, and staff communication for restaurants.**
+**Een gebruiksvriendelijk systeem om reserveringen, bestellingen, voorraad en communicatie voor restaurants efficiënt te beheren.**
 
-## Features
+## Functionaliteiten
 
-- **Reservation Management**: 
-  - Create, view, and cancel reservations seamlessly.
-- **Order Processing**: 
-  - Place and manage orders through a QR-based system.
-- **Inventory Tracking**: 
-  - Monitor and update stock levels automatically.
-- **Staff Communication**: 
-  - Real-time messaging for efficient teamwork.
-- **Payment Integration**: 
-  - Simple and secure payment processing.
+- **Reserveringsbeheer**: 
+  - Eenvoudig reserveringen maken, bekijken en annuleren.
+- **Bestelverwerking**: 
+  - Klanten kunnen bestellingen plaatsen via een QR-gebaseerd systeem.
+- **Voorraadbeheer**: 
+  - Automatische updates van voorraad op basis van verkochte items.
+- **Personeelscommunicatie**: 
+  - Real-time berichtenuitwisseling om de samenwerking te verbeteren.
+- **Betalingsverwerking**: 
+  - Naadloze integratie voor veilige betalingen.
 
-## Tech Stack
+## Technologieën
 
-- **Backend**: PHP (OOP, MVC)
-- **Frontend**: HTML, CSS, JavaScript
-- **Database**: MySQL (with MySQLi)
-- **Additional Tools**: AJAX for smooth interactions and QR code libraries for customer experience.
+- **Backend**: PHP (OOP, MVC-architectuur)
+- **Frontend**: HTML, CSS, JavaScript (voor interactieve elementen)
+- **Database**: MySQL (via MySQLi)
+- **Extra Tools**: AJAX voor soepele interacties en een QR-codebibliotheek voor klantenervaring.
 
-## Project Structure
+## Projectstructuur
 
-/app
-  /controllers   -> Handles logic (ReservationController, OrderController, etc.)
-  /models        -> Manages database interactions (ReservationModel, UserModel, etc.)
-  /views         -> Templates for UI
-/config          -> Configuration files (e.g., database)
-/helpers         -> Reusable utilities
-/public          -> Entry point and static assets
-/routes          -> Route definitions
-/core            -> Core classes (Router, Database, etc.)
-/tests           -> Unit tests
+/app  
+  /controllers   -> Bevat controllers voor de logica (bijv. ReservationController, OrderController)  
+  /models        -> Bevat modellen voor database-interacties (bijv. ReservationModel, UserModel)  
+  /views         -> Templates voor de gebruikersinterface  
 
-## Getting Started
+/config  
+  -> Configuratiebestanden (bijv. database-instellingen)
 
-### Prerequisites
+/helpers  
+  -> Herbruikbare functies (bijv. URL-verwerking, datumformattering)
 
-- **Server**: PHP 8.0+
-- **Database**: MySQL 8.0+
-- **Web Browser**: Modern browser (Chrome, Edge, Firefox)
-- **Tools**: Composer (optional for package management)
+/public  
+  -> Bevat toegankelijke bestanden zoals `index.php` en statische bronnen (CSS, JS)
 
-### Installation
+/routes  
+  -> Bevat de route-instellingen voor de applicatie  
 
-1. Clone the repository:
-   git clone https://github.com/your-repo-name/restaurant-management.git
-   cd restaurant-management
+/core  
+  -> Kerncomponenten zoals de router en databasebeheer  
 
-2. Set up the database:
-   - Import `schema.sql` from the `/config` directory into your MySQL instance.
+/tests  
+  -> Unit tests voor functionaliteiten zoals reserveringen en bestellingen  
 
-3. Configure the project:
-   - Edit `/config/config.php` to include your database credentials.
+## Live Gebruik
 
-4. Run the project:
-   - Using PHP's built-in server:
-     php -S localhost:8000 -t public
-   - Open `http://localhost:8000` in your browser.
+Dit project wordt gehost op een webserver en vereist geen installatie door eindgebruikers. Alle bestanden zijn vooraf geconfigureerd en klaar om live te draaien.  
 
-## Contributing
+1. **Toegang tot het systeem**:  
+   - Bezoek de URL die door het restaurant wordt verstrekt.  
 
-Contributions are welcome! Submit a pull request or report issues via the [GitHub Issues page](https://github.com/your-repo-name/issues).
+2. **Onderhoud en updates**:  
+   - Wijzigingen kunnen worden aangebracht via een beveiligde adminomgeving of rechtstreeks op de server.  
 
-## License
+3. **Back-ups**:  
+   - Regelmatige databaseback-ups zijn aanbevolen om gegevensverlies te voorkomen.
 
-This project is licensed under the MIT License. See `LICENSE` for details.
+## Licentie
+
+Dit project is eigendom van [Naam Bedrijf]. Contacteer ons voor licentie-informatie of commerciële samenwerking.
 
 ---
 
-**Built with ❤️ to enhance restaurant operations.**
+**Gebouwd met zorg om restaurants soepel te laten draaien!**
