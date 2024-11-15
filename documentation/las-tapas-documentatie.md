@@ -1,12 +1,12 @@
 # Project Documentatie - Restaurant Systeem
 
 **Inhoudsopgave**
-1. [Structuur en Bestandsindeling](#1-Structuur-en-Bestandsindeling)
+1. [Structuur en Bestandsindeling](#1-structuur-en-bestandsindeling)
 2. [Database (MySQLi)](#2-database-mysqli)
-3. [Functionaliteit per Oplossing](#functionaliteit-per-oplossing)
-4. [Frontend met HTML, CSS en JavaScript](#frontend-met-html-css-en-javascript)
-5. [Projectbeheer en Testing](#projectbeheer-en-testing)
-6. [Coding Conventions](#coding-conventions)
+3. [Functionaliteit per Oplossing](#3-functionaliteit-per-oplossing)
+4. [Frontend met HTML, CSS en JavaScript](#4-frontend-met-html-css-en-javascript)
+5. [Projectbeheer en Testing](#5-projectbeheer-en-testing)
+6. [Coding Conventions](#6-coding-conventions)
 
 ---
 
