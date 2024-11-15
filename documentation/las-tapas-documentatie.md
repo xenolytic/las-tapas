@@ -2,7 +2,7 @@
 
 **Inhoudsopgave**
 1. [Structuur en Bestandsindeling](#1-Structuur-en-Bestandsindeling)
-2. [Database (MySQLi)](#database-mysqli)
+2. [Database (MySQLi)](#2-database-mysqli)
 3. [Functionaliteit per Oplossing](#functionaliteit-per-oplossing)
 4. [Frontend met HTML, CSS en JavaScript](#frontend-met-html-css-en-javascript)
 5. [Projectbeheer en Testing](#projectbeheer-en-testing)
