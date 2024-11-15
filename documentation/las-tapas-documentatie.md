@@ -172,9 +172,8 @@
 
 Voorbeeld:
 ```
-/**
- * Class for handling reservations.
- */
+Class for handling reservations.
+
 class Reservation {
     /**
      * Creates a new reservation.
