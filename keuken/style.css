@@ -1,0 +1,343 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth transition */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #d52b1e;
+    color: white;
+    padding-top: 20px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth toggle transition */
+    transform: translateX(0);
+    z-index: 200;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-250px); /* Move sidebar off-screen */
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    background-color: #d52b1e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 300;
+}
+
+.sidebar-toggle-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 20px;
+    transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar.collapsed {
+        transform: translateX(-200px);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .sidebar.collapsed {
+        transform: translateX(-150px);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* Header Styling */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d52b1e;
+    color: white;
+    padding: 0 20px; /* Remove the top and bottom padding, only add side padding */
+    width: 100%; /* Ensure the header spans the full width */
+    height: 120px; /* Adjust the height of the header */
+    margin: 0; /* Remove any default margin */
+}
+
+.header-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logo {
+    max-height: 50px;
+    width: auto;
+}
+
+
+/* Orders Grid */
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Order Card */
+.order {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-left: 6px solid #d52b1e; /* Default to green border */
+    display: flex;
+    flex-direction: column;
+}
+
+.order h2 {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.order p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.order .order-time {
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.order .item-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.order .item-list li {
+    font-size: 14px;
+    color: #333;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.order .item-list li:last-child {
+    border-bottom: none;
+}
+
+/* Priority Status Colors */
+.order.priority {
+    border-left-color: #d9534f; /* Red for priority */
+}
+
+.order.normal {
+    border-left-color: #28a745; /* Green for normal orders */
+}
+
+/* Button for Completed Orders */
+.remove-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+}
+
+.remove-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar.collapsed {
+        transform: translateX(-200px);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+
+    .logo {
+        max-height: 40px;
+    }
+
+    .orders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-toggle-btn {
+        left: 20px;
+    }
+}
+
+/* Media Query for Very Small Screens */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .sidebar.collapsed {
+        transform: translateX(-150px);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .header-title {
+        font-size: 18px;
+    }
+
+    .orders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-toggle-btn {
+        padding: 8px 15px;
+    }
+}
+
+/* Add these improvements to your CSS */
+.order {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-left: 6px solid #d52b1e;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.error-message {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease, fadeOut 0.5s 2.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
