@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Tafel Systeem</title>
+    <link rel="icon" type="image/x-icon" href="../photos/la cubanita.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tafel.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="front-side">
+                <h1>Restaurant Table System</h1>
+                <p>Below put in the amount of customers and customer name.</p>
+                <input type="number" id="customerCount" min="1" class="input-box" placeholder="Number of Customers">
+                <input type="text" id="findCustomerName" class="input-box" placeholder="Customer Name">
+                <br><br>
+                <button class="find-btn" onclick="findTable()">Find Table</button>
+                <button class="flip-btn" onclick="flipContent()">Reservations</button>
+            </div>
+        
+            <div class="back-side" id="back-side">
+                <h2>Reservations</h2>
+                <p>Here you can find the upcoming reservations.</p>
+                <div id="checklist"></div>
+                <button class="flip-btn" onclick="flipContent()">Go Back</button>
+            </div>
+        </div>
+        
+        <div id="tables" class="table-container"></div>
+    </section>
+
+    <header>
+        <div class="navbar-logo">
+            <img src="../css/La Cubanita.png" alt="Logo" style="height: 100px;">
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="navbar-toggle" id="navbar-toggle">
+                &#9776;
+            </div>
+        </nav>
+    </header>
+
+    <section class="reservation-form">
+        <h2>Make a Reservation</h2>
+        <input type="text" id="customerName" placeholder="Enter your name" class="input-box">
+        <input type="number" id="reservationCustomerCount" min="1" placeholder="Number of customers" class="input-box">
+        <input type="datetime-local" id="reservationTime" class="input-box">
+        <button class="find-btn" onclick="makeReservation()">Make Reservation</button>
+    </section>
+
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <p id="confirm-message"></p>
+            <div class="modal-actions">
+                <button id="confirm-yes">Yes</button>
+                <button id="confirm-no">No</button>
+            </div>
+        </div>
+    </div>    
+
+    <div id="notification-container"></div>
+
+    <script src="../includes/table.js"></script>
+    <script src="../includes/reservations.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- INSERT INTO `tables` (`table_number`, `max_capacity`, `current_customers`)
+VALUES 
+(1, 4, 0),  -- Table 1 with capacity for 4 people, currently empty
+(2, 2, 0),  -- Table 2 with capacity for 2 people, currently empty
+(3, 6, 0),  -- Table 3 with capacity for 6 people, currently empty
+(4, 8, 0);  -- Table 4 with capacity for 8 people, currently empty 
+-->
