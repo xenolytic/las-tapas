@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /las-tapas/
+
+# Make sure requests for the public directory are not rewritten
+RewriteCond %{REQUEST_URI} !^/las-tapas/public/
+
+# Rewrite all requests to the public/index.php file
+RewriteRule ^(.*)$ /las-tapas/public/index.php [L]
