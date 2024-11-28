@@ -31,42 +31,56 @@
 ### File Structure
 - **/app**
     - **/controllers**
-        - `OrderController.php`
-        - `ReservationController.php`
-        - `UserController.php`
-        - ...
+        - `drinkController.php` - Beheert logica voor drankfunctionaliteit.
+        - `guestController.php` - Beheert logica voor gastfunctionaliteit.
+        - `kitchenController.php` - Beheert logica voor keukenfunctionaliteit.
+        - `erpController.php` - Beheert logica voor ERP-functionaliteit.
+        - `waiterController.php` - Beheert logica voor obersysteemfunctionaliteit.
+        - `tableController.php` - Beheert logica voor tafelsysteemfunctionaliteit.
+        - `adminController.php` - Beheert logica voor beheerdersfunctionaliteit.
+        - `paymentController.php` - Beheert logica voor betalingen.
     - **/models**
-        - `UserModel.php`
-        - `MenuModel.php`
-        - `ReservationModel.php`
-        - `OrderModel.php`
-        - ...
+        - `drinkModel.php` - Model voor drankgegevens.
+        - `guestModel.php` - Model voor gastgegevens.
+        - `kitchenModel.php` - Model voor keukenbeheer.
+        - `erpModel.php` - Model voor ERP-beheer.
+        - `waiterModel.php` - Model voor obergegevens.
+        - `tableModel.php` - Model voor tafelsysteem.
+        - `adminModel.php` - Model voor beheerdersgegevens.
+        - `paymentModel.php` - Model voor betalingen.
     - **/views**
-        - `order.php`
-        - `reservation.php`
-        - `user.php`
-        - ...
+        - `drinkView.php` - Weergave voor drankfunctionaliteit.
+        - `guestView.php` - Weergave voor gastfunctionaliteit.
+        - `kitchenView.php` - Weergave voor keukenfunctionaliteit.
+        - `erpView.php` - Weergave voor ERP-functionaliteit.
+        - `waiterView.php` - Weergave voor obersysteemfunctionaliteit.
+        - `tableView.php` - Weergave voor tafelsysteemfunctionaliteit.
+        - `adminView.php` - Weergave voor beheerdersfunctionaliteit.
+        - `paymentView.php` - Weergave voor betalingen.
 - **/config**
-    - `config.php` - Bevat configuraties voor de database en andere instellingen
+    - `config.php` - Bevat configuraties voor de database en andere instellingen.
 - **/helpers**
-    - `urlHelper.php` - Functies voor URL-verwerking
-    - `stringHelper.php` - Functies voor stringmanipulatie
-    - `dateHelper.php` - Functies voor datumformattering
+    - `urlHelper.php` - Functies voor URL-verwerking.
+    - `dateHelper.php` - Functies voor datumformattering.
+    - `stringHelper.php` - Functies voor stringmanipulatie.
 - **/public**
-    - `index.php` - Hoofdingang van de applicatie
-    - **/assets**
-        - **/css**
-            - `style.css`
-        - **/js**
-            - `script.js`
+    - `index.php` - Hoofdingang van de applicatie.
+    - **/js**
+        - JavaScript-bestanden.
+    - **/css**
+        - CSS-bestanden.
 - **/routes**
-    - `web.php` - Bevat alle gedefinieerde routes voor de applicatie
+    - `web.php` - Bevat alle gedefinieerde routes voor de applicatie.
 - **/core**
-    - `Router.php` - Voor routering van URL-verzoeken naar de juiste controllers
-    - `Database.php` - Beheert de database-verbinding
-    - `Session.php` - Voor sessiebeheer
+    - `Router.php` - Voor routering van URL-verzoeken naar de juiste controllers.
+    - `Database.php` - Beheert de database-verbinding.
+    - `Session.php` - Voor sessiebeheer.
+- **/documentation**
+    - `las-tapas-documentation.md` - Documentatie van het project.
 - **/tests**
     - Bevat PHPUnit tests voor controllers, models en andere functionaliteiten.
+- `.htaccess` - Voor URL-herschrijvingen.
+- `README.md` - Overzicht en uitleg van het project.
 
 ---
 
