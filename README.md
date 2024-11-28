@@ -24,28 +24,54 @@
 
 ## Projectstructuur
 
-/app  
-  /controllers   -> Bevat controllers voor de logica (bijv. ReservationController, OrderController)  
-  /models        -> Bevat modellen voor database-interacties (bijv. ReservationModel, UserModel)  
-  /views         -> Templates voor de gebruikersinterface  
-
-/config  
-  -> Configuratiebestanden (bijv. database-instellingen)
-
-/helpers  
-  -> Herbruikbare functies (bijv. URL-verwerking, datumformattering)
-
-/public  
-  -> Bevat toegankelijke bestanden zoals `index.php` en statische bronnen (CSS, JS)
-
-/routes  
-  -> Bevat de route-instellingen voor de applicatie  
-
-/core  
-  -> Kerncomponenten zoals de router en databasebeheer  
-
-/tests  
-  -> Unit tests voor functionaliteiten zoals reserveringen en bestellingen  
+- **/app**
+    - **/controllers**
+        - `drinkController.php` - Beheert logica voor drankfunctionaliteit.
+        - `guestController.php` - Beheert logica voor gastfunctionaliteit.
+        - `kitchenController.php` - Beheert logica voor keukenfunctionaliteit.
+        - `erpController.php` - Beheert logica voor ERP-functionaliteit.
+        - `waiterController.php` - Beheert logica voor obersysteemfunctionaliteit.
+        - `tableController.php` - Beheert logica voor tafelsysteemfunctionaliteit.
+        - `adminController.php` - Beheert logica voor beheerdersfunctionaliteit.
+        - `paymentController.php` - Beheert logica voor betalingen.
+    - **/models**
+        - `drinkModel.php` - Model voor drankgegevens.
+        - `guestModel.php` - Model voor gastgegevens.
+        - `kitchenModel.php` - Model voor keukenbeheer.
+        - `erpModel.php` - Model voor ERP-beheer.
+        - `waiterModel.php` - Model voor obergegevens.
+        - `tableModel.php` - Model voor tafelsysteem.
+        - `adminModel.php` - Model voor beheerdersgegevens.
+        - `paymentModel.php` - Model voor betalingen.
+    - **/views**
+        - `drinkView.php` - Weergave voor drankfunctionaliteit.
+        - `guestView.php` - Weergave voor gastfunctionaliteit.
+        - `kitchenView.php` - Weergave voor keukenfunctionaliteit.
+        - `erpView.php` - Weergave voor ERP-functionaliteit.
+        - `waiterView.php` - Weergave voor obersysteemfunctionaliteit.
+        - `tableView.php` - Weergave voor tafelsysteemfunctionaliteit.
+        - `adminView.php` - Weergave voor beheerdersfunctionaliteit.
+        - `paymentView.php` - Weergave voor betalingen.
+- **/config**
+    - `config.php` - Bevat configuraties voor de database en andere instellingen.
+- **/helpers**
+    - `urlHelper.php` - Functies voor URL-verwerking.
+    - `dateHelper.php` - Functies voor datumformattering.
+    - `stringHelper.php` - Functies voor stringmanipulatie.
+- **/public**
+    - `index.php` - Hoofdingang van de applicatie.
+    - **/js**
+        - JavaScript-bestanden.
+    - **/css**
+        - CSS-bestanden.
+- **/routes**
+    - `web.php` - Bevat alle gedefinieerde routes voor de applicatie.
+- **/core**
+    - `Router.php` - Voor routering van URL-verzoeken naar de juiste controllers.
+    - `Database.php` - Beheert de database-verbinding.
+    - `Session.php` - Voor sessiebeheer.
+- **/documentation**
+    - `las-tapas-documentation.md` - Documentatie van het project.
 
 ## Live Gebruik
 
