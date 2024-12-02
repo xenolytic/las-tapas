@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #d9534f;
+    background-color: #007bff;
     color: white;
     text-align: center;
     padding: 50px 0;
@@ -23,7 +23,7 @@ header {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color:  #d41002;
+    background-color:  #0071eb;
 }
 
 .dropdown li {
@@ -36,7 +36,7 @@ header {
 }
 
 .dropdown li a:hover {
-    background-color: #c9302c;
+    background-color: #2990ff;
 }
 /* Sidebar Styling */
 .sidebar {
@@ -45,7 +45,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #d52b1e;
+    background-color: #007bff;
     color: white;
     padding-top: 20px;
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth toggle transition */
@@ -90,7 +90,7 @@ header {
     position: fixed;
     top: 20px;
     left: 10px;
-    background-color: #d52b1e;
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -100,7 +100,7 @@ header {
 }
 
 .sidebar-toggle-btn:hover {
-    background-color: #c9302c;
+    background-color: #2990ff;
 }
 
 /* Main Content */
@@ -131,7 +131,7 @@ table {
 }
 
 table thead {
-    background-color: #d52b1e;
+    background-color: #007bff;
     color: white;
 }
 
@@ -147,7 +147,7 @@ table tbody tr:nth-child(even) {
 
 /* Button Styling */
 button {
-    background-color: #d52b1e;
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -163,7 +163,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #d52b1e;
+    background-color: #007bff;
     color: white;
     position: fixed;
     bottom: 0;

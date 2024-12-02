@@ -3,7 +3,7 @@
 $servername = "localhost";  // Change if your MySQL server is hosted elsewhere
 $username = "root";  // Replace with your MySQL username
 $password = "";  // Replace with your MySQL password
-$dbname = "old_orders_db";  // Replace with your database name
+$dbname = "old_orders_bar_db";  // Replace with your database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -52,7 +52,7 @@ $result = $conn->query($sql);
                     <tr>
                         <th>ID</th>
                         <th>Tafelnummer</th>
-                        <th>Gerechten</th>
+                        <th>Dranken</th>
                         <th>Voltooid</th>
                         <th>Besteld op</th>
                     </tr>
@@ -83,12 +83,12 @@ $result = $conn->query($sql);
     </main>
 
     <script>
-document.getElementById("sidebar-toggle").addEventListener("click", function() {
-    const sidebar = document.getElementById("sidebar");
-    sidebar.classList.toggle("collapsed");
-});
-
-document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById("sidebar-toggle").addEventListener("click", function() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("collapsed"); // Toggle collapsed class on sidebar
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('oudeBestellingen-toggle');
     const dropdown = document.getElementById('oudeBestellingen-dropdown');
 
