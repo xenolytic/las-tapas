@@ -82,3 +82,13 @@ document.getElementById("sidebar-toggle").addEventListener("click", function() {
     const sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle("collapsed");
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('oudeBestellingen-toggle');
+    const dropdown = document.getElementById('oudeBestellingen-dropdown');
+
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdown.classList.toggle('hidden');
+    });
+});

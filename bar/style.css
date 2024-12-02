@@ -11,6 +11,32 @@ body {
     transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth transition */
 }
 
+/* Style for hidden dropdown */
+.hidden {
+    display: none;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color:  #0071eb;
+}
+
+.dropdown li {
+    padding: 8px 16px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown li a:hover {
+    background-color: #2990ff;
+}
+
 /* Sidebar Styling */
 .sidebar {
     height: 100%;
