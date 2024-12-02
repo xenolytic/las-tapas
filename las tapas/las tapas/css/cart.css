@@ -1,0 +1,125 @@
+
+
+body {
+    font-family: 'Almendra SC', 'Bookman', 'URW Bookman L', serif; /* Almendra SC font added */
+    color: #000000; /* Ensure text is white for contrast */
+    background-color: #d1d1d1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../photos/lastapasshopdusseldorf.jpg'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 75vh;
+    width: 100vw; 
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(163, 163, 163, 0.5); /* Semi-transparent overlay */
+    z-index: 0; 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center; 
+}
+
+.shopping-cart {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Almendra SC', serif;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table thead th {
+    text-align: left;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Flexbox for product info */
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-info img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cart-totals {
+    text-align: right;
+    font-family: 'Almendra SC', serif;
+}
+
+.proceed-btn, .delete-btn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.proceed-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.proceed-btn:hover {
+    background-color: #2980b9;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
+
+.h2 {
+    word-spacing: 4em; /* Wider spacing for emphasis */
+}

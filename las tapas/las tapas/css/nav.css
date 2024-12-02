@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: white; /* White navbar background */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 15px 50px; /* Add padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+    font-family: 'Almendra SC', serif;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: black; /* Simple placeholder for the logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px; /* Even spacing between buttons */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px; /* Add padding to replicate button size */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 20px; /* Subtle rounded corners */
+}
+
+.nav-links a:hover {
+    background-color: #e2e2e2; /* Light gray hover background */
+    color: black; /* Keep the text color the same */
+}
+
+.menu-button {
+    display: none; /* Hidden for larger screens */
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block; /* Show menu button for small screens */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none; /* Initially hidden */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 10px 20px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
+
+
+
+.custom-button {
+    position: absolute; /* Keeps the button independent of other elements */
+    left: 50%; /* Start at the center of the navbar */
+    transform: translateX(-50%); /* Adjust to perfectly center the button */
+    background-color: #4caf4f00; /* Transparent green background */
+    color: rgb(0, 0, 0); /* Black text */
+    border: 1px solid rgb(0, 0, 0); /* Black border */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+    background-color: #000000; /* Black background on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -2px); /* Subtle lift effect while staying centered */
+    color: rgb(255, 255, 255); /* White text */
+}
+
+.custom-button:active {
+    transform: translate(-50%, 1px); /* Button pressed down effect */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .custom-button {
+        font-size: 14px; /* Slightly smaller text */
+        padding: 10px 16px; /* Reduce padding */
+    }
+}
+
